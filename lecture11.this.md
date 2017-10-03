@@ -17,7 +17,7 @@
   - Today we'll start by looking at JavaScript interview questions,
     gauging where we're at so far.    
     - Questions will mainly involve scope and closure  
-    
+    - link: https://www.toptal.com/javascript/interview-questions
 
 # this
   - `this` is the *context* associated with the execution of a function. Unlike

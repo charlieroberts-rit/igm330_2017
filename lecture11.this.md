@@ -143,5 +143,5 @@ foo.draw() // no more error!
 
 
 # ICE
-  - Boomshine parts 1 & 2, due next Tuesday
+  - Boomshine parts 1, due next Tuesday
       

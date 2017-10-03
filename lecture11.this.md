@@ -50,7 +50,7 @@ var myobj = {
 
 var myobj2 = { foo:10000 }
   
-myobj.bar.call( foo ) // -> 10000
+myobj.bar.call( myobj ) // -> 10000
 ```
   
   * So what are the other *default contexts* for functions?

@@ -17,7 +17,7 @@
   - Today we'll start by looking at JavaScript interview questions,
     gauging where we're at so far.    
     - Questions will mainly involve scope and closure  
-    
+    - link: https://www.toptal.com/javascript/interview-questions
 
 # this
   - `this` is the *context* associated with the execution of a function. Unlike
@@ -50,7 +50,7 @@ var myobj = {
 
 var myobj2 = { foo:10000 }
   
-myobj.bar.call( foo ) // -> 10000
+myobj.bar.call( myobj ) // -> 10000
 ```
   
   * So what are the other *default contexts* for functions?
@@ -143,5 +143,4 @@ foo.draw() // no more error!
 
 
 # ICE
-  - Boomshine parts 1 & 2, due next Tuesday
-      
+  - Boomshine parts 1, due next Tuesday

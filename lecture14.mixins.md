@@ -39,7 +39,7 @@ var drivable = {
 	drive() { 
     this.pos.x += 1
     this.pos.y += 1
-    console.log(`driving! x=${this.pos.x}, y=${this.pos.y} ) 
+    console.log(`driving! x=${this.pos.x}, y=${this.pos.y}` ) 
   }
 } 
 
@@ -60,7 +60,7 @@ var drivable = {
 	drive() { 
     this.pos.x += 1
     this.pos.y += 1
-    console.log(`driving! x=${this.pos.x}, y=${this.pos.y} ) 
+    console.log(`driving! x=${this.pos.x}, y=${this.pos.y}` ) 
   }
 } 
 
@@ -84,7 +84,7 @@ var drivable = {
 	drive() { 
     this.pos.x += 1
     this.pos.y += 1
-    console.log(`driving! x=${this.pos.x}, y=${this.pos.y} ) 
+    console.log(`driving! x=${this.pos.x}, y=${this.pos.y}` ) 
   }
 } 
 

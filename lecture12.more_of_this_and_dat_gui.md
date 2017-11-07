@@ -46,4 +46,4 @@ window.onload = function() {
 
 # Reading  
   - Chapters 4 & 5 - You Don't Know JS - this & object prototypes
-  https://github.com/getify/You-Dont-Know-JS/tree/master/this%20%26%20object%20prototypes
+  https://github.com/getify/You-Dont-Know-JS/tree/master/this%20%26%20object%20prototypes 

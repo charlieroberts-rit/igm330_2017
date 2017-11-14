@@ -69,7 +69,7 @@ Every else is run the same. For more info on the options for the `env` preset, s
 By using uglify we can get minified JavaScript files. As we’ll see shortly, sometimes this can result in big reductions in file size. Many of the steps to install/use uglify are similar to the ones we used with Babel.
 
 1. Using Git Bash, from your home directory, install uglify:
-`npm install uglify-js —verbose`
+`npm install uglify-js --verbose`
 
 2. Create an alias for uglify:
 `alias uglify=~/node_modules/uglify-js/bin/uglifyjs`

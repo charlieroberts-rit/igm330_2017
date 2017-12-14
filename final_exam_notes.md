@@ -293,7 +293,7 @@ After writing the code for this, the following code should function:
 
 ```js
 const mybike = Bike( 0, 0, 5 ) 
-mybike.move()
+mybike.ride()
 console.log( mybike.x ) // -> 5
 console.log( mybike.y ) // -> 5
 ```

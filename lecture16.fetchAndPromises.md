@@ -27,19 +27,20 @@ fetch( "http://api.fixer.io/latest?base=USD" ).then( result => {
 
 That’s a lot cleaner! But what is happening?
 
-* `fetch()` returns a JavaScript `Promise` object. This object represents a contract stating that *when* a particular action is finished *then* another action will be carried out. 
-	* In this case the *when* is loading a piece of data from a remote server. After the data is loaded, the function we pass to *then* is carried out.
-* calling `result.json()` creates *another Promise*; this promise is subsequently resolved in the next call to `then()` with the parsed JSON data. 
-* `result` represents a `Results` object that can be parsed into a variety of different data formats… JSON, image blobs etc.
+* `fetch()` returns a JavaScript `Promise` object. This object represents a contract stating that *when* a particular action is finished *then* another action will be carried out.  
+* In this case the *when* is loading a piece of data from a remote server. After the data is loaded, the function we pass to *then* is carried out.  
+* calling `result.json()` creates *another Promise*; this promise is subsequently resolved in the next call to `then()` with the parsed JSON data.  
+* `result` represents a `Results` object that can be parsed into a variety of different data formats… JSON, image blobs etc.  
 
-Fetch *is not found in IE 11*. https://caniuse.com/#search=fetch
-But there’s a polyfill! https://github.com/github/fetch
+Fetch *is not found in IE 11*. https://caniuse.com/#search=fetch  
+
+But there’s a polyfill! https://github.com/github/fetch  
 
 ## So when do we use JS Promises?
-* not in IE 11: https://caniuse.com/#search=promises
-• Anytime we want to avoid a series of nested callbacks. 
-	• In the example above, first we need a callback for fetching the data, and then we need a callback for parsing the JSON.
-		• Although `JSON.parse()` is synchronous, for really large files this can be a big problem, as it could block the main thread for many seconds.
+* not in IE 11: https://caniuse.com/#search=promises  
+* Anytime we want to avoid a series of nested callbacks.  
+* In the example above, first we need a callback for fetching the data, and then we need a callback for parsing the JSON.  
+* Although `JSON.parse()` is synchronous, for really large files this can be a big problem, as it could block the main thread for many seconds.  
 
 ### What does a Promise actually look like?
 
@@ -64,9 +65,9 @@ var p = new Promise( (resolve, reject) => {
   }
 }).then( result => {
   console.log( result )
-}).catch( error ) {
+}).catch( error => {
   console.log( error )
-}
+})
 ```
 
 ## What if we want to load lots of data, and know when they’re all finished?
@@ -85,7 +86,7 @@ fiveSeconds = new Promise( (resolve,reject) => {
 })
 
 Promise.all( [oneSecond,threeSeconds,fiveSeconds] ).then( results => {
-	console.log( 'all done!', results )
+  console.log( 'all done!', results )
 })
 ```
 
@@ -109,7 +110,8 @@ Promise.all( [ USD, AUD, GBP ]).then( jsonArray => {
   console.log( 'data downloaded' )
 
   const parsingPromises = jsonArray.map( v => v.json() )
-	Promise.all( parsingPromises ).then( parsed => {
+  
+  Promise.all( parsingPromises ).then( parsed => {
     console.log( 'parsed json', parsed )
   })
 })
